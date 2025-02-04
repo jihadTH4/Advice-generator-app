@@ -1,0 +1,102 @@
+/* manrope-800 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./assets/fonts/manrope-v15-latin-800.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Neutral-Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--Dark-Blue);
+    margin: 5em auto;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    display: block;
+}
+
+q {
+    font-size: 28px;
+}
+
+.container {
+    width: fit-content;
+    background-color: var(--Dark-Grayish-Blue);
+    padding: 1em;
+    padding-bottom: 3.5em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    border-radius: .5em;
+    position: relative;
+}
+
+.advice-id {
+    color: var(--Neon-Green);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 1em;
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.7142857142857143rem + 0.17857142857142858vw, 0.875rem);
+}
+
+.advice-text {
+    color: var(--Light-Cyan);
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1.4285714285714286rem + 0.35714285714285715vw, 1.75rem);
+}
+
+.dice-btn {
+    position: absolute;
+    bottom: -30px;
+    background-color: var(--Neon-Green);
+    border: none;
+    padding: 1.25em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: box-shadow .2s ease;
+}
+
+.dice-btn:hover,
+.dice-btn:active {
+    box-shadow: 0 0 25px 0 var(--Neon-Green);
+}
+
+@media (min-width: 768px) {
+    body {
+        margin: 10em auto;
+    }
+
+    .container {
+        padding: 2em;
+        padding-bottom: 4em;
+        width: 500px;
+    }
+}
